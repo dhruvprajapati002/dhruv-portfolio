@@ -1,0 +1,188 @@
+/* Fonts loaded via next/font in layout.tsx — no external stylesheet needed */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── CSS Variables ──────────────────────────────────────────── */
+:root {
+  --cream: #F8F6F1;
+  --white: #FFFFFF;
+  --orange: #C84B11;
+  --orange-light: #E8601A;
+  --black: #111111;
+  --gray-mid: #6B6B6B;
+  --gray-light: #E8E4DC;
+  --gray-subtle: #F0EBE0;
+  --green-tech: #2D6A4F;
+  --blue-tech: #1A4F8A;
+  --purple-tech: #4A3B8C;
+}
+
+/* ── Reset ──────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background: var(--cream);
+  color: var(--black);
+  font-family: 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ── Image defaults ────────────────────────────────────────── */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #C84B11;
+  color: #fff;
+}
+
+/* ── Scrollbar ──────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F0EBE0;
+}
+::-webkit-scrollbar-thumb {
+  background: #C84B11;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E8601A;
+}
+
+/* ── Pre-animation state ────────────────────────────────────── */
+.will-animate {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+/* ── Grain Texture ──────────────────────────────────────────── */
+.grain::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  opacity: 0.035;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Custom Cursor Styles ──────────────────────────────────── */
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background: #C84B11;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+
+.cursor-ring {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #C84B11;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%) scale(1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+
+
+
+.cursor-ring.project-hover {
+  background: rgba(200, 75, 17, 0.06);
+}
+
+.cursor-ring .cursor-text {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: #C84B11;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.cursor-ring.project-hover .cursor-text {
+  opacity: 1;
+}
+
+/* ── Architecture Diagram animations ───────────────────────── */
+@keyframes archNodeFadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes archEdgeDraw {
+  from { stroke-dashoffset: 1000; }
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes accentPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+.arch-node {
+  animation: archNodeFadeIn 0.5s ease forwards;
+  opacity: 0;
+}
+
+.arch-edge {
+  stroke-dasharray: 1000;
+  animation: archEdgeDraw 0.8s ease forwards;
+}
+
+.arch-accent {
+  animation: accentPulse 2.5s ease-in-out infinite;
+}
+
+/* ── Mobile: hide cursor ────────────────────────────────────── */
+@media (max-width: 768px) {
+  .cursor-dot, .cursor-ring {
+    display: none !important;
+  }
+}
+
+/* ── Marquee ───────────────────────────────────────────────── */
+.marquee-track {
+  display: flex;
+  gap: 3rem;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* ── Modal scroll lock ──────────────────────────────────────── */
+html.modal-open {
+  overflow: hidden;
+}

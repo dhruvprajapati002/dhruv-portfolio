@@ -1,0 +1,9 @@
+'use client';
+import { useRef } from 'react';
+import { useInView } from 'framer-motion';
+
+export function useScrollReveal(margin: string = '-80px') {
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { once: true, margin });
+  return { ref, inView };
+}

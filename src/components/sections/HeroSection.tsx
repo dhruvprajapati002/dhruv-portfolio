@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { site, computedStats } from '@/data/site';
-import NodeGraph from '@/components/ui/NodeGraph';
+import DevWorkflowDiagram from '@/components/ui/DevWorkflowDiagram';
 import { useCounter } from '@/hooks/useCounter';
 
 const containerVariants = {
@@ -73,10 +73,10 @@ export default function HeroSection() {
       className="relative min-h-screen flex items-center overflow-hidden grain"
       id="hero"
     >
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10 w-full py-24 md:py-0">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-center">
-          {/* Left Column — 60% */}
-          <div className="lg:col-span-3">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10 w-full py-16 md:py-0">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+          {/* Left Column — text — order-2 on mobile (diagram shows above) */}
+          <div className="order-2 lg:order-1">
             {/* Eyebrow */}
             <motion.div variants={childVariants} className="flex items-center gap-3 mb-8">
               <div className="w-7 h-[2px] bg-orange" />
@@ -162,13 +162,10 @@ export default function HeroSection() {
             </motion.div>
           </div>
 
-          {/* Right Column — NodeGraph */}
-          <div className="lg:col-span-2 hidden md:block">
-            <motion.div
-              variants={childVariants}
-              className="w-full aspect-square max-w-[460px] mx-auto overflow-hidden rounded-xl"
-            >
-              <NodeGraph />
+          {/* Right Column — DevWorkflowDiagram — order-1 on mobile (shows above text) */}
+          <div className="order-1 lg:order-2">
+            <motion.div variants={childVariants} className="w-full">
+              <DevWorkflowDiagram />
             </motion.div>
           </div>
         </div>

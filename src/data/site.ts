@@ -114,8 +114,9 @@ export const site = {
       problem: "Security analysts struggle to manually gather and analyze IOC data from multiple sources, leading to slow threat response.",
       solution: "Built an automated IOC analysis platform that aggregates threat data, processes it efficiently, and presents insights through a clean UI.",
       tech: ["Next.js", "TypeScript", "MongoDB", "Node.js", "REST APIs"],
-      links: {
-        code: ""
+       links: {
+        demo: 'https://ioc-analyzer.vercel.app/dashboard',
+        code: 'https://github.com/dhruvprajapati002/IOC-Analyzer',
       },
       features: [
         "IOC fetching (IPs, domains, hashes)",

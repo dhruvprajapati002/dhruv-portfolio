@@ -25,7 +25,7 @@ export default function Footer() {
             {/* Left: Logo */}
             <div>
               <a href="#" className="font-display text-2xl font-bold no-underline text-white">
-                DP<span className="text-orange ml-0.5">●</span>
+                Dhruv Prajapati<span className="text-orange ml-0.5">●</span>
               </a>
               <p className="mt-3 text-sm text-gray-400 font-sans max-w-xs">
                 Full-stack developer crafting performant, scalable web applications.

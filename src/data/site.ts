@@ -1,3 +1,5 @@
+import { arch } from "os";
+
 const YEARS_OF_EXPERIENCE = 1;
 
 export const site = {
@@ -45,14 +47,31 @@ export const site = {
 
   experience: [
     {
-      title: "Frontend / Full Stack Developer Intern",
+      title: "Full Stack Developer",
       company: "Forensic CyberTech",
-      location: "Remote / India",
-      date: "Nov 2025 – Present",
+      location: "ahemdabad / India",
+      date: "May 2026 – Present",
       duration: "Ongoing",
-      type: "Internship",
+      type: "Full-time",
       status: "Ongoing",
-      description: "Working on cybersecurity-focused platforms with full-stack responsibilities beyond assigned frontend role.",
+      description: "Transitioned to a full-time role to anchor the development of cybersecurity platforms and threat intelligence tools.",
+      points: [
+        "Leading the full-stack development of the IOC Analyzer platform",
+        "Designing scalable database architectures and data refinement pipelines",
+        "Optimizing application performance across frontend and backend"
+      ],
+      tech: ["Next.js", "TypeScript", "MongoDB", "Node.js", "REST APIs"],
+      relatedProjectId: "ioc-analyzer"
+    },
+    {
+      title: "Full Stack Developer Intern",
+      company: "Forensic CyberTech",
+      location: "ahemdabad / India",
+      date: "Nov 2025 – Apr 2026",
+      duration: "6 Months",
+      type: "Internship",
+      status: "Completed",
+      description: "Worked on cybersecurity-focused platforms with full-stack responsibilities beyond assigned frontend role.",
       points: [
         "Developed IOC Analyzer platform for fetching and analyzing Indicators of Compromise (IOCs)",
         "Built using Next.js, TypeScript, and MongoDB with scalable architecture",
@@ -109,13 +128,13 @@ export const site = {
       year: "2025–Present",
       status: "Ongoing",
       featured: true,
-      demoAvailable: false,
+      demoAvailable: true,
       description: "Full-stack cybersecurity platform that fetches and analyzes Indicators of Compromise (IOCs) including IPs, domains, and hashes using external threat intelligence sources.",
       problem: "Security analysts struggle to manually gather and analyze IOC data from multiple sources, leading to slow threat response.",
       solution: "Built an automated IOC analysis platform that aggregates threat data, processes it efficiently, and presents insights through a clean UI.",
       tech: ["Next.js", "TypeScript", "MongoDB", "Node.js", "REST APIs"],
        links: {
-        demo: 'https://ioc-analyzer.vercel.app/dashboard',
+        demo: 'https://ioc-analyzer.vercel.app/',
         code: 'https://github.com/dhruvprajapati002/IOC-Analyzer',
       },
       features: [
@@ -124,7 +143,27 @@ export const site = {
         "Fast search and filtering system",
         "Scalable backend with MongoDB",
         "Clean dashboard UI for analysis"
-      ]
+      ],
+      arch :{
+        title: "Threat Intelligence Aggregation Pipeline",
+        nodes: [
+          { id: 'client', label: 'Next.js Frontend', layer: 0, type: 'frontend', accent: true },
+          { id: 'api', label: 'Node.js Backend', layer: 1, type: 'backend' },
+          { id: 'aggregator', label: 'Data Refinement Engine', layer: 2, type: 'service' },
+          { id: 'mongo', label: 'MongoDB Cache', layer: 2, type: 'database' },
+          { id: 'threat', label: 'VirusTotal, AbuseIPDB, MalwareBazaar, URLhaus, ThreatFox, IPQS, GreyNoise', layer: 3, type: 'external' },
+        ],
+        edges: [
+          { from: 'client', to: 'api', label: 'Search IOC Request' },
+          { from: 'api', to: 'mongo', label: 'Check Cache' },
+          { from: 'api', to: 'aggregator', label: 'Dispatch Searches' },
+          { from: 'aggregator', to: 'threat', label: 'Query Threat Platforms' },
+          { from: 'threat', to: 'aggregator', label: 'Raw Responses' },
+          { from: 'aggregator', to: 'api', label: 'Refined & Standardized Data' },
+          { from: 'api', to: 'mongo', label: 'Store Cache' },
+          { from: 'api', to: 'client', label: 'Aggregated Threat Report' },
+        ],
+      }
     },
     {
       id: 'hotel-booking',

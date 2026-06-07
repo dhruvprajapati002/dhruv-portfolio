@@ -107,8 +107,8 @@ export const site = {
     degree: 'Bachelor of Computer Applications (BCA)',
     school: 'Hemchandracharya North Gujarat University',
     location: 'Mahesana, Gujarat',
-    years: '2022 – 2026',
-    gpa: '8.5 / 10',
+    years: '2022 –   2026',
+    gpa: '	8.84 / 10',
     status: 'In Progress',
     subjects: ['DSA', 'DBMS', 'Web Technologies', 'Software Engineering', 'Computer Networks', 'Operating Systems'],
     journey: [

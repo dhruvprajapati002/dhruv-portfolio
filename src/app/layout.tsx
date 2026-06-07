@@ -35,6 +35,11 @@ export const metadata: Metadata = {
     description: 'Building systems that actually scale.',
     type: 'website',
   },
+  icons: {
+    icon: '/profile.png',
+    shortcut: '/profile.png',
+    apple: '/profile.png',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -42,6 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/profile.png" />
       </head>
       <body
         className={`${playfair.variable} ${dmSans.variable} ${jetbrainsMono.variable} bg-cream text-ink font-sans antialiased`}

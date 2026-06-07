@@ -37,7 +37,7 @@ export default function AboutSection() {
             className="space-y-4"
           >
             {[
-              { icon: Code2, label: 'Focus', value: 'Full-Stack Development' },
+              { icon: Code2, label: 'Focus', value: site.role },
               { icon: Briefcase, label: 'Experience', value: `${site.stats.years}+ Year Building Web Apps` },
               { icon: MapPin, label: 'Location', value: site.location },
             ].map((item) => (

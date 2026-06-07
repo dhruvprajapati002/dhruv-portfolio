@@ -4,7 +4,7 @@ const YEARS_OF_EXPERIENCE = 1;
 
 export const site = {
   name: 'Dhruv Prajapati',
-  role: 'Full Stack Developer',
+  role: 'Software Developer',
   location: 'Mahesana, Gujarat, India',
   email: 'dhruvprajapati0023@gmail.com',
   phone: '+91-6351987712',
@@ -13,6 +13,7 @@ export const site = {
   resume: '/resume.pdf',
 
   taglines: [
+    'Aspiring Software Developer',
     'MERN Stack Developer',
     'Full-Stack Engineer',
     'Problem Solver',
@@ -47,7 +48,7 @@ export const site = {
 
   experience: [
     {
-      title: "Full Stack Developer",
+      title: "Software Developer",
       company: "Forensic CyberTech",
       location: "ahemdabad / India",
       date: "May 2026 – Present",
@@ -56,15 +57,16 @@ export const site = {
       status: "Ongoing",
       description: "Transitioned to a full-time role to anchor the development of cybersecurity platforms and threat intelligence tools.",
       points: [
-        "Leading the full-stack development of the IOC Analyzer platform",
+        "Leading development of new cybersecurity tools and platform features",
+        "Authentication, role-based access control, and secure API design",
         "Designing scalable database architectures and data refinement pipelines",
         "Optimizing application performance across frontend and backend"
       ],
       tech: ["Next.js", "TypeScript", "MongoDB", "Node.js", "REST APIs"],
-      relatedProjectId: "ioc-analyzer"
+      
     },
     {
-      title: "Full Stack Developer Intern",
+      title: "React Developer Intern",
       company: "Forensic CyberTech",
       location: "ahemdabad / India",
       date: "Nov 2025 – Apr 2026",
@@ -113,23 +115,23 @@ export const site = {
       { year: '2022', title: 'Started Learning', desc: 'HTML, CSS, JavaScript fundamentals', color: 'green' },
       { year: '2023', title: 'MERN Stack', desc: 'React, Node.js, Express, MongoDB deep dive', color: 'blue' },
       { year: '2024', title: 'Real Projects', desc: '5+ full-stack apps + internship experience', color: 'purple' },
-      { year: '2025', title: 'Advanced Projects + Internship', desc: 'Built 25+ projects and working as a full-stack intern in cybersecurity domain', color: 'purple' },
-      { year: 'Now', title: 'Ready for More', desc: 'Seeking full-time opportunities', color: 'orange' },
+      { year: '2025', title: 'Advanced Projects + Internship', desc: 'Built 7+ projects and working as a React developer intern in cybersecurity domain', color: 'purple' },
+      { year: 'Now', title: 'Working Full-time  ', desc: 'Software Developer at forensic cyberTech ', color: 'orange' },
     ],
   }],
-  summary: `Aspiring full-stack developer with ${YEARS_OF_EXPERIENCE}+ year hands-on experience in MERN stack. Built secure, responsive applications with authentication, CRUD operations, and modern cloud deployments through personal projects and internship experience.`,
+  summary: `Aspiring Software Developer with ${YEARS_OF_EXPERIENCE}+ year hands-on experience in MERN stack. Built secure, responsive applications with authentication, CRUD operations, and modern cloud deployments through personal projects and internship experience.`,
 
   projects: [
     {
       id: "ioc-analyzer",
       name: "IOC Analyzer",
       tagline: "Cybersecurity platform for fetching and analyzing threat intelligence (IOCs)",
-      category: "Full-Stack Security",
+      category: "Software Security",
       year: "2025–Present",
       status: "Ongoing",
       featured: true,
       demoAvailable: true,
-      description: "Full-stack cybersecurity platform that fetches and analyzes Indicators of Compromise (IOCs) including IPs, domains, and hashes using external threat intelligence sources.",
+      description: "Software cybersecurity platform that fetches and analyzes Indicators of Compromise (IOCs) including IPs, domains, and hashes using external threat intelligence sources.",
       problem: "Security analysts struggle to manually gather and analyze IOC data from multiple sources, leading to slow threat response.",
       solution: "Built an automated IOC analysis platform that aggregates threat data, processes it efficiently, and presents insights through a clean UI.",
       tech: ["Next.js", "TypeScript", "MongoDB", "Node.js", "REST APIs"],
@@ -169,7 +171,7 @@ export const site = {
       id: 'hotel-booking',
       name: 'Hotel Booking System',
       tagline: 'Real-time room management with automated email workflows',
-      category: 'Full-Stack Web',
+      category: 'Software Development',
       year: '2024',
       status: 'Completed',
       featured: true,

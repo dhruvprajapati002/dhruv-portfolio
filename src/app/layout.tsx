@@ -25,13 +25,13 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Dhruv Prajapati — Full Stack Developer',
+  title: 'Dhruv Prajapati — Software Developer',
   description:
     'Portfolio of Dhruv Prajapati — aspiring full-stack developer specializing in MERN stack, React, Node.js, and modern web technologies.',
-  keywords: ['Dhruv Prajapati', 'Full Stack Developer', 'MERN Stack', 'React', 'Node.js', 'Portfolio'],
+  keywords: ['Dhruv Prajapati', 'Software Developer', 'MERN Stack', 'React', 'Node.js', 'Portfolio'],
   authors: [{ name: 'Dhruv Prajapati' }],
   openGraph: {
-    title: 'Dhruv Prajapati — Full Stack Developer Portfolio',
+    title: 'Dhruv Prajapati — Software Developer Portfolio',
     description: 'Building systems that actually scale.',
     type: 'website',
   },
